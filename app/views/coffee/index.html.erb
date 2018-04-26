@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300" rel="stylesheet">
+        <title>CofeeRunner</title>
+    </head>
+    <body>
+        <div id="banner">
+            <img src="/assets/four.jpeg">
+            <div id="header">
+                <h1>CoffeeRun</h1>
+                <!-- <p>Bay Area, CA</p> -->
+            </div>
+        </div>
+
+
+        <%@coffee.parse['businesses'].each do |biz|%>
+        <p><%= biz['name'] %></p>
+        <%end%>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoffeeRunner</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navbar">
+        <img src="/assets/icon-5.png">
+        <div id="nav-links">
+            <p style="font-weight: bolder">CoffeeRun</p>
+            <p>Info</p>
+            <p>Cafes</p>
+        </div>
+    </div>
+
+
+
+    <%= yield %>
+  </body>
+</html>
