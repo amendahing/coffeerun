@@ -22,8 +22,14 @@ class CoffeeController < ApplicationController
         redirect_to "/coffee/show/#{params[:zipcode]}"
     end
 
+
     def show
         @coffeeshops = HTTP.auth("Bearer #{API_KEY}").get('https://api.yelp.com/v3/businesses/search?term=coffee&location='+ params[:zipcode] +'&limit=5')
+    end
+
+
+    def checkout
+        
     end
 
 
