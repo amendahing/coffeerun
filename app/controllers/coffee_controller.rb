@@ -15,9 +15,15 @@ class CoffeeController < ApplicationController
 
 
     def index
-        puts "___________________________________"
-        @coffee = HTTP.auth("Bearer #{API_KEY}").get('https://api.yelp.com/v3/businesses/search?term=coffee&location=94580&limit=4')
+    end
 
+
+    def create
+        redirect_to "/coffee/show/#{params[:zipcode]}"
+    end
+
+    def show
+        @coffeeshops = HTTP.auth("Bearer #{API_KEY}").get('https://api.yelp.com/v3/businesses/search?term=coffee&location='+ params[:zipcode] +'&limit=5')
     end
 
 

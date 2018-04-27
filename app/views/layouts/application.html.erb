@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CoffeeRunner</title>
+    <title>CoffeeRun</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,9 +12,16 @@
     <div class="navbar">
         <img src="/assets/icon-5.png">
         <div id="nav-links">
-            <p style="font-weight: bolder">CoffeeRun</p>
-            <p>Info</p>
-            <p>Cafes</p>
+            <a href="/coffee/index"><p style="font-weight: bolder">CoffeeRun</p></a>
+            <!-- <p>Info</p>
+            <p>Cafes</p> -->
+
+            <form action="/coffee" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="text" name="zipcode" placeholder="zipcode">
+                <input type='submit' value='Search'>
+            </form>
+
         </div>
     </div>
 

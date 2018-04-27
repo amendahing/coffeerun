@@ -26,23 +26,31 @@
     margin-top: 23px;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 
 .navbar p{
     font-family: 'Montserrat', sans-serif;
     display: inline;
     margin-right: 15px;
     text-transform: uppercase;
-    color: #555555;
+    color: #555;
+}
+
+.navbar form {
+    display: inline-block;
 }
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    color: #555555;
+    color: #444444;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    color: #555555;
+    color: #555;
     font-size: 14px;
 }
 
@@ -54,19 +62,78 @@ p {
 
 #header{
     position: fixed;
-    top: 250px;
+    top: 211px;
     left: 282px;
     animation-name: fall;
     animation-duration: 1s;
 }
 
 #header h1{
-    font-size: 50px;
-    text-transform: uppercase;
+    font-size: 60px;
+    /* text-transform: uppercase; */
 }
 
 @keyframes fall {
     /* 0% {left: 282px; top: -100px; } */
     20% {left: 282px; top: -100px; }
-    100% {left: 282px; top: 250px;}
+    100% {left: 282px; top: 211px;}
+}
+
+#search {
+    position: fixed;
+    top: 295px;
+    left: 354px;
+    animation-name: appear;
+    animation-duration: 1s;
+}
+
+@keyframes appear {
+    0% {left: 354px; top: -100px; opacity: 0}
+    80% {opacity: 0 }
+    90% {opacity: .5 }
+    110% {opacity: 1}
+}
+
+#info-block {
+    border-bottom: 1px solid #ccc;
+    padding-top: 25px;
+    margin-left: 50px;
+    padding-bottom: 25px;
+    width: 40%;
+}
+
+#info-block img{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    border-radius: 15px;
+}
+
+#info {
+    margin-top: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#info h1 h2 h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#map {
+    height: 400px;
+    width: 50%;
+}
+
+#map-2 {
+    height: 800px;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left{
+    display: inline-block;
+    width: 50%;
+    height: 815px;
+    overflow: scroll;
 }
